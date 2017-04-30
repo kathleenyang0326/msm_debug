@@ -4,7 +4,7 @@ class DirectorsController < ApplicationController
     render("index.html.erb")
   end
 
-  def show
+  def show_details
     @director = Director.find(params[:id])
     render("show_details.html.erb")
   end
@@ -39,7 +39,7 @@ class DirectorsController < ApplicationController
 
     @director.save
 
-    render("show")
+    render("show_details.html.erb")
   end
 
   def destroy
